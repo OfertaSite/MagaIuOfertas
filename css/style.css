@@ -1245,3 +1245,54 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* Desktop Styles - Menu à direita */
+@media (min-width: 900px) {
+    .header-content {
+        justify-content: space-between; /* Isso garante que o logo fique à esquerda e o nav à direita */
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
+    nav a {
+        padding: 0.5rem 0;
+        position: relative;
+    }
+    
+    nav a:hover {
+        background-color: transparent;
+    }
+    
+    nav a:hover:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        animation: underline 0.3s ease-out;
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+    }
+    
+    nav {
+        display: block;
+        position: static;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        width: auto;
+    }
+}
+
+@keyframes underline {
+    from { width: 0; }
+    to { width: 100%; }
+}
