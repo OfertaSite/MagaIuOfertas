@@ -31,21 +31,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  font-size: 16px; /* Standard base font size */
 }
 
-/* Typography Scale */
-h1, .h1 { font-size: 1.5rem; line-height: 1.2; }
-h2, .h2 { font-size: 1.25rem; line-height: 1.3; }
-h3, .h3 { font-size: 1.125rem; line-height: 1.4; }
-p, .text { font-size: 0.875rem; line-height: 1.6; }
-.small { font-size: 0.75rem; line-height: 1.5; }
-.xsmall { font-size: 0.625rem; line-height: 1.4; }
+/* Typography Scale - Mobile First */
+h1, .h1 { font-size: 1.75rem; line-height: 1.2; }
+h2, .h2 { font-size: 1.5rem; line-height: 1.3; }
+h3, .h3 { font-size: 1.25rem; line-height: 1.4; }
+p, .text { font-size: 1rem; line-height: 1.6; }
+.small { font-size: 0.875rem; line-height: 1.5; }
+.xsmall { font-size: 0.75rem; line-height: 1.4; }
 
 @media (min-width: 768px) {
   h1, .h1 { font-size: 2rem; }
-  h2, .h2 { font-size: 1.5rem; }
-  h3, .h3 { font-size: 1.25rem; }
-  p, .text { font-size: 0.9375rem; }
+  h2, .h2 { font-size: 1.75rem; }
+  h3, .h3 { font-size: 1.5rem; }
+  p, .text { font-size: 1.125rem; }
 }
 
 /* Layout */
@@ -100,7 +101,7 @@ p, .text { font-size: 0.875rem; line-height: 1.6; }
 }
 
 .logo-text {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   letter-spacing: -0.5px;
 }
 
@@ -347,7 +348,7 @@ p, .text { font-size: 0.875rem; line-height: 1.6; }
 
 .pix-discount {
   color: var(--success);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 /* Product Options */
@@ -570,7 +571,7 @@ p, .text { font-size: 0.875rem; line-height: 1.6; }
 
 .review-date {
   color: var(--text-light);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .review-text {
