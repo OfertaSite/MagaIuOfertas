@@ -1359,3 +1359,179 @@ footer {
             50% { width: 70%; }
             100% { width: 30%; }
         }
+
+        /* MODAL DE ENDEREÇO - ESTILO MAGALU */
+.checkout-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 9999;
+    overflow-y: auto;
+    font-family: 'Poppins', sans-serif;
+}
+
+.checkout-content {
+    background: white;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px #3b82f6(123, 31, 162, 0.3);
+    animation: modalSlideIn 0.4s ease-out;
+    border-top: 5px solid #3b82f6;
+    position: relative;
+}
+
+@keyframes modalSlideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.checkout-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.checkout-header h2 {
+    color: #3b82f6;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkout-header h2 i {
+    color: #EF6C00;
+}
+
+.close-checkout {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.3s;
+}
+
+.close-checkout:hover {
+    color: #E53935;
+    transform: rotate(90deg);
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.checkout-form input, 
+.checkout-form select {
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.checkout-form input:focus, 
+.checkout-form select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px #3b82f6(123, 31, 162, 0.2);
+    outline: none;
+}
+
+.checkout-form .form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.checkout-form .form-row > div {
+    flex: 1;
+}
+
+.confirm-checkout-btn {
+    background: linear-gradient(135deg, #3b82f6, #3b82f6);
+    color: white;
+    border: none;
+    padding: 16px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px #3b82f6(156, 39, 176, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.confirm-checkout-btn:hover {
+    background: linear-gradient(135deg, #3b82f6, #3b82f6);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px #3b82f6(156, 39, 176, 0.4);
+}
+
+.confirm-checkout-btn i {
+    font-size: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .checkout-content {
+        padding: 25px 20px;
+        margin: 20px auto;
+    }
+    
+    .checkout-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .checkout-header h2 {
+        font-size: 20px;
+    }
+}
+
+/* Elementos de segurança */
+.security-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    color: #666;
+    font-size: 13px;
+}
+
+.security-badge i {
+    color: #4CAF50;
+    font-size: 18px;
+}
