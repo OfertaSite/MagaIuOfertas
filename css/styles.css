@@ -1706,7 +1706,7 @@ footer {
             /* Mobile fix */
             @media (max-width: 768px) {
             .hr-colorful {
-                top: 74px; /* Ajuste conforme o header mobile */
+                top: 69px; /* Ajuste conforme o header mobile */
             }
     }
 
