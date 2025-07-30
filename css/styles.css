@@ -7,14 +7,14 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #2d3748;
+    background-color: #f8fafc;
     overflow-x: hidden;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
 }
 
-/* Header remains with blue gradient */
+/* Header Mobile-First */
 header {
     background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
     color: white;
@@ -27,29 +27,10 @@ header {
 
 .hr-colorful {
   position: fixed;
-  top: 65px;
+  top: 65px; /* ajuste com base na altura real do seu header */
   left: 0;
   width: 100%;
   z-index: 999;
-  height: 5px;
-  border: none;
-  border-radius: 4px;
-  background: linear-gradient(to right,
-      rgb(255, 255, 74) 0px,
-      rgb(252, 208, 0) 4%,
-      rgb(255, 193, 18) 8%,
-      rgb(255, 193, 18) 11%,
-      rgb(255, 138, 0) 16%,
-      rgb(255, 95, 95) 22%,
-      rgb(255, 37, 58) 28%,
-      rgb(255, 55, 168) 37%,
-      rgb(199, 57, 255) 49%,
-      rgb(164, 0, 225) 56%,
-      rgb(46, 206, 255) 72%,
-      rgb(0, 134, 255) 80%,
-      rgb(114, 247, 114) 94%,
-      rgb(0, 214, 4)
-  );
 }
 
 .header-content {
@@ -128,7 +109,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #f7f7f7 0%, #ededed 50%, #e0e0e0 100%);
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 50%, #e2e8f0 100%);
     padding: 1.5rem 1rem;
     text-align: center;
     position: relative;
@@ -142,7 +123,7 @@ nav a:hover {
 }
 
 .offer-badge {
-    background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 50px;
@@ -160,14 +141,14 @@ nav a:hover {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     font-weight: 800;
-    color: #111;
+    color: #1e40af;
     margin-bottom: 0.8rem;
     line-height: 1.3;
 }
 
 .hero-subtitle {
     font-size: 0.95rem;
-    color: #555;
+    color: #4a5568;
     margin-bottom: 1.5rem;
     line-height: 1.5;
 }
@@ -179,7 +160,7 @@ nav a:hover {
     border-radius: 12px;
     margin: 1.5rem 0;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e2e8f0;
 }
 
 .product-title {
@@ -197,7 +178,7 @@ nav a:hover {
 .original-price {
     display: block;
     text-decoration: line-through;
-    color: #999;
+    color: #a0aec0;
     font-size: 0.85rem;
     margin-bottom: 0.3rem;
 }
@@ -206,15 +187,15 @@ nav a:hover {
     display: block;
     font-size: 1.5rem;
     font-weight: 800;
-    color: #d32f2f;
+    color: #dc2626;
     font-family: 'Segoe UI', sans-serif;
 }
 
 .product-code {
     font-size: 0.75rem;
-    color: #666;
+    color: #718096;
     font-weight: 500;
-    background-color: #f5f5f5;
+    background-color: #f7fafc;
     padding: 0.3rem 0.6rem;
     border-radius: 4px;
     display: inline-block;
@@ -263,7 +244,7 @@ nav a:hover {
     border-radius: 50%;
     cursor: pointer;
     font-size: 1rem;
-    color: #333;
+    color: #2563eb;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     z-index: 10;
     display: flex;
@@ -290,13 +271,13 @@ nav a:hover {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #d1d1d1;
+    background: #d1d5db;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .indicator.active {
-    background: #333;
+    background: #2563eb;
     transform: scale(1.2);
 }
 
@@ -308,7 +289,7 @@ nav a:hover {
 .rating-section {
     margin-bottom: 1.2rem;
     padding-bottom: 0.8rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .rating-stars {
@@ -321,23 +302,23 @@ nav a:hover {
 .rating-number {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #111;
+    color: #1f2937;
 }
 
 .stars-display {
-    color: #ffc107;
+    color: #fbbf24;
     font-size: 0.9rem;
 }
 
 .review-count {
-    color: #666;
+    color: #6b7280;
     font-size: 0.75rem;
 }
 
 .evaluate-btn {
     background: none;
-    border: 1px solid #333;
-    color: #333;
+    border: 1px solid #2563eb;
+    color: #2563eb;
     padding: 0.4rem 0.8rem;
     border-radius: 6px;
     cursor: pointer;
@@ -353,19 +334,19 @@ nav a:hover {
 .option-label {
     display: block;
     font-weight: 600;
-    color: #444;
+    color: #374151;
     margin-bottom: 0.5rem;
     font-size: 0.85rem;
 }
 
 .selected-option {
     font-weight: 600;
-    color: #111;
+    color: #1f2937;
     font-size: 0.85rem;
 }
 
 .product-variant {
-    color: #666;
+    color: #6b7280;
     font-size: 0.75rem;
     margin-top: 0.25rem;
 }
@@ -379,7 +360,7 @@ nav a:hover {
 
 .voltage-btn {
     padding: 0.4rem 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid #d1d5db;
     background: white;
     border-radius: 6px;
     cursor: pointer;
@@ -388,9 +369,9 @@ nav a:hover {
 }
 
 .voltage-btn.active {
-    border-color: #333;
-    background: #e0e0e0;
-    color: #000;
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #2563eb;
     font-weight: 600;
 }
 
@@ -398,23 +379,23 @@ nav a:hover {
 .seller-info {
     margin-bottom: 1.2rem;
     padding: 0.8rem;
-    background: #f0f0f0;
+    background: #f9fafb;
     border-radius: 8px;
-    border-left: 4px solid #4caf50;
+    border-left: 4px solid #10b981;
 }
 
 .seller-info p {
     margin: 0;
-    color: #444;
+    color: #374151;
     font-size: 0.75rem;
 }
 
 /* Pricing Section */
 .pricing-section {
-    background: #f5f5f5;
+    background: #f8fafc;
     padding: 1rem;
     border-radius: 10px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e2e8f0;
     margin-bottom: 1.2rem;
 }
 
@@ -424,29 +405,29 @@ nav a:hover {
 
 .crossed-price {
     text-decoration: line-through;
-    color: #999;
+    color: #9ca3af;
     font-size: 0.85rem;
 }
 
 .current-price {
     font-size: 1.3rem;
     font-weight: 800;
-    color: #d32f2f;
+    color: #dc2626;
     display: block;
 }
 
 .installments {
-    color: #444;
+    color: #374151;
     font-size: 0.75rem;
     display: block;
     margin-top: 0.25rem;
 }
 
 .pix-price {
-    background: #e8f5e9;
+    background: #ecfdf5;
     padding: 0.8rem;
     border-radius: 8px;
-    border: 1px solid #4caf50;
+    border: 1px solid #10b981;
     margin-top: 0.8rem;
 }
 
@@ -458,24 +439,24 @@ nav a:hover {
 }
 
 .pix-label {
-    color: #444;
+    color: #374151;
     font-size: 0.75rem;
 }
 
 .pix-amount {
     font-size: 0.9rem;
     font-weight: 700;
-    color: #2e7d32;
+    color: #059669;
 }
 
 .pix-method {
-    color: #444;
+    color: #374151;
     font-weight: 600;
     font-size: 0.75rem;
 }
 
 .pix-discount {
-    color: #2e7d32;
+    color: #059669;
     font-size: 0.65rem;
     font-weight: 500;
 }
@@ -487,11 +468,10 @@ nav a:hover {
     border-radius: 10px;
     margin: 1.5rem 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border: 1px solid #e0e0e0;
 }
 
 .product-description h3 {
-    color: #111;
+    color: #1e40af;
     margin-bottom: 0.8rem;
     font-size: 1.2rem;
     text-align: center;
@@ -500,7 +480,7 @@ nav a:hover {
 .product-description p {
     font-size: 0.85rem;
     line-height: 1.6;
-    color: #555;
+    color: #4a5568;
     margin-bottom: 1rem;
 }
 
@@ -521,7 +501,7 @@ nav a:hover {
 
 .features-list li {
     padding: 0.4rem 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e5e7eb;
     position: relative;
     padding-left: 1.2rem;
     font-size: 0.85rem;
@@ -531,22 +511,22 @@ nav a:hover {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #333;
+    color: #1e40af;
     font-weight: bold;
 }
 
-/* Testimonials Section */
+/* Testimonials Section - Improved Mobile Design */
 .testimonials {
     background: white;
     padding: 1.2rem;
     border-radius: 12px;
     margin: 1.5rem 0;
     box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e2e8f0;
 }
 
 .testimonials h3 {
-    color: #111;
+    color: #1e40af;
     margin-bottom: 1.2rem;
     text-align: center;
     font-size: 1.3rem;
@@ -563,7 +543,7 @@ nav a:hover {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: linear-gradient(90deg, #555, #777);
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
     border-radius: 3px;
 }
 
@@ -573,7 +553,7 @@ nav a:hover {
     scroll-snap-type: x mandatory;
     gap: 1rem;
     padding-bottom: 1rem;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .testimonials-container::-webkit-scrollbar {
@@ -586,17 +566,17 @@ nav a:hover {
 }
 
 .testimonials-container::-webkit-scrollbar-thumb {
-    background: #555;
+    background: #3b82f6;
     border-radius: 2px;
 }
 
 .testimonial {
     flex: 0 0 85%;
     scroll-snap-align: start;
-    background: #f5f5f5;
+    background: #f8fafc;
     padding: 1.2rem;
     border-radius: 10px;
-    border-left: 4px solid #333;
+    border-left: 4px solid #2563eb;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
@@ -610,7 +590,7 @@ nav a:hover {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #555;
+    background-color: #3b82f6;
     color: white;
     display: flex;
     align-items: center;
@@ -627,24 +607,24 @@ nav a:hover {
 .user-name {
     font-weight: 600;
     font-size: 0.9rem;
-    color: #111;
+    color: #1f2937;
     margin-bottom: 0.1rem;
 }
 
 .review-date {
-    color: #666;
+    color: #6b7280;
     font-size: 0.7rem;
 }
 
 .stars {
-    color: #ffc107;
+    color: #fbbf24;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
 
 .testimonial-text {
     font-size: 0.85rem;
-    color: #555;
+    color: #4a5568;
     line-height: 1.6;
     margin-bottom: 0.8rem;
 }
@@ -652,7 +632,7 @@ nav a:hover {
 .testimonial-verified {
     display: flex;
     align-items: center;
-    color: #4caf50;
+    color: #10b981;
     font-size: 0.7rem;
     font-weight: 500;
 }
@@ -663,7 +643,7 @@ nav a:hover {
 
 /* Rating Summary */
 .rating-summary {
-    background: #f5f5f5;
+    background: #f8fafc;
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1.5rem;
@@ -673,12 +653,12 @@ nav a:hover {
 .average-rating {
     font-size: 2rem;
     font-weight: 700;
-    color: #111;
+    color: #1f2937;
     margin-bottom: 0.3rem;
 }
 
 .total-reviews {
-    color: #666;
+    color: #6b7280;
     font-size: 0.8rem;
     margin-bottom: 1rem;
 }
@@ -701,14 +681,14 @@ nav a:hover {
 
 .rating-label {
     font-size: 0.7rem;
-    color: #666;
+    color: #6b7280;
     width: 60px;
 }
 
 .bar-container {
     flex-grow: 1;
     height: 8px;
-    background: #ddd;
+    background: #e5e7eb;
     border-radius: 4px;
     margin: 0 0.5rem;
     overflow: hidden;
@@ -716,13 +696,13 @@ nav a:hover {
 
 .bar-fill {
     height: 100%;
-    background: linear-gradient(90deg, #ffc107, #ff9800);
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
     border-radius: 4px;
 }
 
 .rating-count {
     font-size: 0.7rem;
-    color: #666;
+    color: #6b7280;
     width: 30px;
     text-align: right;
 }
@@ -734,7 +714,7 @@ nav a:hover {
 }
 
 .write-review-btn {
-    background: linear-gradient(135deg, #555 0%, #333 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -742,7 +722,7 @@ nav a:hover {
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(85, 85, 85, 0.3);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
@@ -751,7 +731,36 @@ nav a:hover {
 
 .write-review-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(85, 85, 85, 0.4);
+    box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Tablet Styles */
+@media (min-width: 600px) {
+    .testimonial {
+        flex: 0 0 45%;
+    }
+    
+    .rating-summary {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 1.5rem;
+    }
+    
+    .rating-overview {
+        flex: 0 0 120px;
+    }
+    
+    .rating-distribution {
+        flex-grow: 1;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 900px) {
+    .testimonial {
+        flex: 0 0 30%;
+    }
 }
 
 /* Why Offer */
@@ -761,7 +770,6 @@ nav a:hover {
     border-radius: 10px;
     margin: 1.5rem 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    border: 1px solid #e0e0e0;
 }
 
 .why-offer h3 {
@@ -777,17 +785,17 @@ nav a:hover {
 }
 
 .benefit {
-    background: #e8f5e9;
+    background: #ecfdf5;
     padding: 0.6rem;
     border-radius: 6px;
-    border-left: 3px solid #4caf50;
+    border-left: 3px solid #10b981;
     font-weight: 500;
     font-size: 0.85rem;
 }
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #222 0%, #444 100%);
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
     color: white;
     padding: 1.5rem;
     border-radius: 12px;
@@ -809,7 +817,7 @@ nav a:hover {
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #d32f2f 0%, #f44336 100%);
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
     color: white;
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
@@ -849,13 +857,13 @@ nav a:hover {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     text-align: center;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #f3f4f6;
 }
 
 .feature-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #555 0%, #333 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -873,14 +881,14 @@ nav a:hover {
 }
 
 .feature-description {
-    color: #555;
+    color: #4a5568;
     line-height: 1.5;
     font-size: 0.85rem;
 }
 
 /* Stats Section */
 .stats-section {
-    background: linear-gradient(135deg, #222 0%, #444 100%);
+    background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
     color: white;
     padding: 1.5rem 1rem;
     text-align: center;
@@ -902,7 +910,7 @@ nav a:hover {
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 0.3rem;
-    color: #ffc107;
+    color: #fbbf24;
 }
 
 .stat-label {
@@ -912,8 +920,8 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #f0f0f0;
-    border-top: 1px solid #ddd;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
     padding: 1.5rem 1rem;
     margin-top: 2rem;
     text-align: center;
@@ -933,7 +941,7 @@ footer {
 }
 
 .footer-links a {
-    color: #333;
+    color: #2563eb;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.75rem;
@@ -942,12 +950,12 @@ footer {
 .footer-info {
     margin-bottom: 1.2rem;
     line-height: 1.5;
-    color: #666;
+    color: #6b7280;
     font-size: 0.75rem;
 }
 
 .footer-contact {
-    background-color: #333;
+    background-color: #2563eb;
     color: white;
     padding: 0.8rem;
     border-radius: 8px;
@@ -967,15 +975,121 @@ footer {
 .phone-number {
     font-size: 1rem;
     font-weight: bold;
-    color: #ffc107;
+    color: #fbbf24;
 }
 
 .footer-legal {
     font-size: 0.65rem;
-    color: #888;
+    color: #9ca3af;
     line-height: 1.5;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #e5e7eb;
     padding-top: 1rem;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 600px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .product-showcase {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .image-carousel {
+        flex: 1;
+    }
+    
+    .product-details {
+        flex: 1;
+        padding-left: 1.5rem;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 900px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+    
+    nav {
+        display: block;
+        position: static;
+        background: none;
+        padding: 0;
+        box-shadow: none;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    .hero-section {
+        padding: 2rem 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .feature-card {
+        padding: 1.5rem;
+    }
+    
+    .footer-links {
+        gap: 1.5rem;
+    }
+    
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+    
+    .footer-info {
+        font-size: 0.8rem;
+    }
 }
 
 /* Customer Testimonials */
@@ -985,7 +1099,6 @@ footer {
     margin: 2rem 0;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border: 1px solid #e0e0e0;
 }
 
 .customer-testimonials .container {
@@ -1000,7 +1113,7 @@ footer {
 
 .section-header i {
     font-size: 2rem;
-    color: #111;
+    color: #1e40af;
     margin-bottom: 1rem;
 }
 
@@ -1013,7 +1126,7 @@ footer {
 .divider {
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, #555, #777);
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
     margin: 0 auto;
     border-radius: 3px;
 }
@@ -1026,10 +1139,10 @@ footer {
 }
 
 .testimonial-card {
-    background: #f5f5f5;
+    background: #f8fafc;
     padding: 1.5rem;
     border-radius: 10px;
-    border-left: 4px solid #333;
+    border-left: 4px solid #2563eb;
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
@@ -1054,7 +1167,7 @@ footer {
 }
 
 .rating {
-    color: #ffc107;
+    color: #fbbf24;
     font-size: 0.9rem;
 }
 
@@ -1062,7 +1175,7 @@ footer {
     margin-bottom: 1rem;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #555;
+    color: #4a5568;
     font-style: italic;
 }
 
@@ -1074,14 +1187,14 @@ footer {
 }
 
 .verified-buyer {
-    color: #4caf50;
+    color: #10b981;
     display: flex;
     align-items: center;
     gap: 0.3rem;
 }
 
 .review-date {
-    color: #666;
+    color: #6b7280;
 }
 
 .testimonials-cta {
@@ -1093,7 +1206,7 @@ footer {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #555, #333);
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
     color: white;
     border: none;
     padding: 0.8rem 1.5rem;
@@ -1108,71 +1221,154 @@ footer {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(85, 85, 85, 0.3);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
 }
 
 .see-all-reviews {
-    color: #333;
+    color: #2563eb;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .see-all-reviews:hover {
-    color: #111;
+    color: #1e40af;
     text-decoration: underline;
 }
 
-/* Urgency Banner */
-.urgency-banner {
-    background: linear-gradient(135deg, #d32f2f, #b71c1c);
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
-    font-family: 'Poppins', sans-serif;
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-cta {
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
-.urgency-banner h3 {
-    margin: 0;
-    font-size: 22px;
-    font-weight: 700;
-    text-transform: uppercase;
+@media (min-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
-.countdown {
-    font-size: 28px;
-    font-weight: 800;
-    margin: 10px 0;
-    letter-spacing: 2px;
+/* Desktop Styles - Menu à direita */
+@media (min-width: 900px) {
+    .header-content {
+        justify-content: space-between; /* Isso garante que o logo fique à esquerda e o nav à direita */
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
+    nav a {
+        padding: 0.5rem 0;
+        position: relative;
+    }
+    
+    nav a:hover {
+        background-color: transparent;
+    }
+    
+    nav a:hover:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        animation: underline 0.3s ease-out;
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+    }
+    
+    nav {
+        display: block;
+        position: static;
+        background: transparent;
+        padding: 0;
+        box-shadow: none;
+        width: auto;
+    }
 }
 
-.stock-counter {
-    background: rgba(255,255,255,0.2);
-    padding: 8px;
-    border-radius: 20px;
-    font-weight: 600;
-    display: inline-block;
+@keyframes underline {
+    from { width: 0; }
+    to { width: 100%; }
 }
 
-.progress-bar {
-    height: 6px;
-    background: rgba(255,255,255,0.3);
-    border-radius: 3px;
-    margin-top: 10px;
-    overflow: hidden;
+/* Ajuste da logo APENAS no mobile */
+@media (max-width: 899px) {
+    .logo img {
+        position: relative;
+        top: 3px; /* Ajuste esse valor conforme necessário (ex: 3px, 5px, -2px, etc) */
+    }
 }
 
-.progress {
-    height: 100%;
-    background: white;
-    width: 30%;
-    animation: progressAnimation 2s ease-in-out infinite;
-}
+ /* ESTILO DO CONTADOR E ESTOQUE */
+        .urgency-banner {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .urgency-banner h3 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .countdown {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 10px 0;
+            letter-spacing: 2px;
+        }
+        
+        .stock-counter {
+            background: rgba(255,255,255,0.2);
+            padding: 8px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 3px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: white;
+            width: 30%;
+            animation: progressAnimation 2s ease-in-out infinite;
+        }
+        
+        @keyframes progressAnimation {
+            0% { width: 30%; }
+            50% { width: 70%; }
+            100% { width: 30%; }
+        }
 
-/* Checkout Modal */
+        /* MODAL DE ENDEREÇO - ESTILO MAGALU */
 .checkout-modal {
     display: none;
     position: fixed;
@@ -1193,10 +1389,21 @@ footer {
     border-radius: 12px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px #3b82f6(123, 31, 162, 0.3);
     animation: modalSlideIn 0.4s ease-out;
-    border-top: 5px solid #333;
+    border-top: 5px solid #3b82f6;
     position: relative;
+}
+
+@keyframes modalSlideIn {
+    from { 
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .checkout-header {
@@ -1209,13 +1416,17 @@ footer {
 }
 
 .checkout-header h2 {
-    color: #333;
+    color: #3b82f6;
     margin: 0;
     font-size: 24px;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.checkout-header h2 i {
+    color: #EF6C00;
 }
 
 .close-checkout {
@@ -1228,7 +1439,7 @@ footer {
 }
 
 .close-checkout:hover {
-    color: #d32f2f;
+    color: #E53935;
     transform: rotate(90deg);
 }
 
@@ -1254,8 +1465,8 @@ footer {
 
 .checkout-form input:focus, 
 .checkout-form select:focus {
-    border-color: #333;
-    box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.2);
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px #3b82f6(123, 31, 162, 0.2);
     outline: none;
 }
 
@@ -1270,7 +1481,7 @@ footer {
 }
 
 .confirm-checkout-btn {
-    background: linear-gradient(135deg, #555, #333);
+    background: linear-gradient(135deg, #3b82f6, #3b82f6);
     color: white;
     border: none;
     padding: 16px;
@@ -1283,7 +1494,7 @@ footer {
     transition: all 0.3s;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 4px 12px rgba(85, 85, 85, 0.3);
+    box-shadow: 0 4px 12px #3b82f6(156, 39, 176, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1291,11 +1502,33 @@ footer {
 }
 
 .confirm-checkout-btn:hover {
-    background: linear-gradient(135deg, #444, #222);
+    background: linear-gradient(135deg, #3b82f6, #3b82f6);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(85, 85, 85, 0.4);
+    box-shadow: 0 6px 16px #3b82f6(156, 39, 176, 0.4);
 }
 
+.confirm-checkout-btn i {
+    font-size: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .checkout-content {
+        padding: 25px 20px;
+        margin: 20px auto;
+    }
+    
+    .checkout-form .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .checkout-header h2 {
+        font-size: 20px;
+    }
+}
+
+/* Elementos de segurança */
 .security-badge {
     display: flex;
     align-items: center;
@@ -1307,163 +1540,173 @@ footer {
 }
 
 .security-badge i {
-    color: #4caf50;
+    color: #4CAF50;
     font-size: 18px;
 }
 
-/* Animations */
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
+/* Estilos para o modal de checkout */
+        .checkout-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+        
+        .checkout-content {
+            background-color: white;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            animation: modalFadeIn 0.3s;
+        }
+        
+        @keyframes modalFadeIn {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .checkout-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .checkout-header h2 {
+            color: #1E40AF;
+            margin: 0;
+        }
+        
+        .close-checkout {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .checkout-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .checkout-form input, .checkout-form select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .checkout-form .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .checkout-form .form-row > div {
+            flex: 1;
+        }
+        
+        .confirm-checkout-btn {
+            background: linear-gradient(135deg, #EF4444, #DC2626);
+            color: white;
+            border: none;
+            padding: 15px;
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        
+        .confirm-checkout-btn:hover {
+            background: linear-gradient(135deg, #DC2626, #B91C1C);
+            transform: translateY(-2px);
+        }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        .hr-colorful {
+            margin: 0;
+            height: 5px;
+            border: none;
+            border-radius: 4px;
+            background: linear-gradient(to right,
+                rgb(255, 255, 74) 0px,
+                rgb(252, 208, 0) 4%,
+                rgb(255, 193, 18) 8%,
+                rgb(255, 193, 18) 11%,
+                rgb(255, 138, 0) 16%,
+                rgb(255, 95, 95) 22%,
+                rgb(255, 37, 58) 28%,
+                rgb(255, 55, 168) 37%,
+                rgb(199, 57, 255) 49%,
+                rgb(164, 0, 225) 56%,
+                rgb(46, 206, 255) 72%,
+                rgb(0, 134, 255) 80%,
+                rgb(114, 247, 114) 94%,
+                rgb(0, 214, 4)
+            );
+            }
 
-@keyframes progressAnimation {
-    0% { width: 30%; }
-    50% { width: 70%; }
-    100% { width: 30%; }
-}
+                .hr-colorful {
+            position: fixed;
+            top: 65px; /* ajuste conforme a altura exata do seu header */
+            left: 0;
+            width: 100%;
+            height: 5px;
+            border: none;
+            border-radius: 4px;
+            z-index: 999;
+            background: linear-gradient(to right,
+                rgb(255, 255, 74) 0px,
+                rgb(252, 208, 0) 4%,
+                rgb(255, 193, 18) 8%,
+                rgb(255, 193, 18) 11%,
+                rgb(255, 138, 0) 16%,
+                rgb(255, 95, 95) 22%,
+                rgb(255, 37, 58) 28%,
+                rgb(255, 55, 168) 37%,
+                rgb(199, 57, 255) 49%,
+                rgb(164, 0, 225) 56%,
+                rgb(46, 206, 255) 72%,
+                rgb(0, 134, 255) 80%,
+                rgb(114, 247, 114) 94%,
+                rgb(0, 214, 4)
+            );
+            }
+        /* Estilo do botão de adicionar ao carrinho */
 
-@keyframes modalSlideIn {
-    from { 
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+            .hr-colorful {
+            position: fixed;
+            top: 65px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            border: none;
+            border-radius: 4px;
+            margin: 0;
+            z-index: 9999;
+            background: linear-gradient(to right,);
+            }
 
-@keyframes underline {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-/* Tablet Styles */
-@media (min-width: 600px) {
-    .hero-title {
-        font-size: 1.8rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .stats-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .testimonial {
-        flex: 0 0 45%;
-    }
-    
-    .rating-summary {
-        display: flex;
-        align-items: center;
-        text-align: left;
-        gap: 1.5rem;
-    }
-    
-    .rating-overview {
-        flex: 0 0 120px;
-    }
-    
-    .rating-distribution {
-        flex-grow: 1;
-    }
-}
-
-/* Desktop Styles */
-@media (min-width: 900px) {
-    .mobile-menu-btn {
-        display: none;
-    }
-    
-     nav {
-        display: block;
-        position: static;
-        background: none;
-        padding: 0;
-        box-shadow: none;
-        margin-left: auto; /* Isso empurra o nav para a direita */
-     }
-
-       nav ul {
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: flex-end; /* Alinha os itens à direita */
-    }
-    
-    .logo {
-        font-size: 1.2rem;
-        margin-right: auto; /* Isso mantém o logo à esquerda */
-    }
-}
-    .logo img {
-        height: 50px;
-    }
-    
-    .hero-section {
-        padding: 2rem 1rem;
-    }
-    
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .features-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    
-    .testimonial {
-        flex: 0 0 30%;
-    }
-    
-    .testimonials-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .feature-card {
-        padding: 1.5rem;
-    }
-    
-    .footer-links {
-        gap: 1.5rem;
-    }
-    
-    .footer-links a {
-        font-size: 0.8rem;
-    }
-    
-    .footer-info {
-        font-size: 0.8rem;
+            /* Mobile fix */
+            @media (max-width: 768px) {
+            .hr-colorful {
+                top: 69px; /* Ajuste conforme o header mobile */
+            }
     }
 
-
-@media (min-width: 1024px) {
-    .testimonials-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-/* Mobile fix for hr */
-@media (max-width: 768px) {
-    .hr-colorful {
-        top: 69px;
-    }
-}
