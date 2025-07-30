@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagaIu Ofertas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background-color: #f8fafc;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.02);
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.2));
+            transition: filter 0.3s ease;
+        }
+
+        .logo img:hover {
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #60a5fa;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        nav a:hover::after {
+            width: 80%;
+        }
+
+        main {
+            min-height: 70vh;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 50%, #e2e8f0 100%);
+            padding: 3rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .offer-badge {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+            animation: pulse 3s infinite;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #4a5568;
+            margin-bottom: 3rem;
+            font-weight: 400;
+        }
+
+        .product-highlight {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-highlight:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 80px rgba(0,0,0,0.15);
+        }
+
+        .product-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2b6cb0;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .price-container {
+            margin: 1.5rem 0;
+        }
+
+        .original-price {
+            display: block;
+            text-decoration: line-through;
+            color: #a0aec0;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .offer-price {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #dc2626;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .product-code {
+            font-size: 0.9rem;
+            color: #718096;
+            font-weight: 500;
+            background-color: #f7fafc;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .product-showcase {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+            align-items: start;
+            width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+            .product-showcase {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .image-carousel {
+                max-width: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image-carousel {
+                padding: 0 40px;
+                max-width: 350px;
+            }
+        }
+
+        .image-carousel {
+            position: relative;
+            max-width: 450px;
+            margin: 0;
+            padding: 0 60px;
+        }
+
+        .product-details {
+            padding: 1rem 0;
+            min-width: 0;
+            width: 100%;
+        }
+
+        .rating-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .rating-stars {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .rating-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .stars-display {
+            color: #fbbf24;
+            font-size: 1.1rem;
+        }
+
+        .review-count {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .evaluate-btn {
+            background: none;
+            border: 1px solid #2563eb;
+            color: #2563eb;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .evaluate-btn:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .product-options {
+            margin-bottom: 2rem;
+        }
+
+        .color-option, .voltage-option {
+            margin-bottom: 1.5rem;
+        }
+
+        .option-label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .selected-option {
+            font-weight: 600;
+            color: #1f2937;
+        }
+
+        .product-variant {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+            margin-bottom: 0;
+        }
+
+        .voltage-buttons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .voltage-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid #d1d5db;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .voltage-btn.active {
+            border-color: #2563eb;
+            background: #eff6ff;
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .voltage-btn:hover {
+            border-color: #2563eb;
+        }
+
+        .seller-info {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+        }
+
+        .seller-info p {
+            margin: 0;
+            color: #374151;
+            font-size: 0.9rem;
+        }
+
+        .pricing-section {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .original-price-display {
+            margin-bottom: 0.5rem;
+        }
+
+        .crossed-price {
+            text-decoration: line-through;
+            color: #9ca3af;
+            font-size: 1rem;
+        }
+
+        .main-price {
+            margin-bottom: 1rem;
+        }
+
+        .current-price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #dc2626;
+            font-family: 'Poppins', sans-serif;
+            display: block;
+        }
+
+        .installments {
+            color: #374151;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        .pix-price {
+            background: #ecfdf5;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #10b981;
+        }
+
+        .pix-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .pix-label {
+            color: #374151;
+        }
+
+        .pix-amount {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #059669;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .pix-method {
+            color: #374151;
+            font-weight: 600;
+        }
+
+        .pix-discount {
+            color: #059669;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #2563eb;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-btn:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .carousel-btn-prev {
+            left: 10px;
+        }
+
+        .carousel-btn-next {
+            right: 10px;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #2563eb;
+            transform: scale(1.2);
+        }
+
+        .indicator:hover {
+            background: #3b82f6;
+            transform: scale(1.1);
+        }
+
+        .image-counter {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .image-carousel {
+                padding: 0 50px;
+            }
+            
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            
+            .carousel-btn-prev {
+                left: 5px;
+            }
+            
+            .carousel-btn-next {
+                right: 5px;
+            }
+        }
+
+        .product-description {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .product-description h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        .features-list {
+            margin-top: 1.5rem;
+        }
+
+        .features-list h4 {
+            color: #374151;
+            margin-bottom: 0.75rem;
+        }
+
+        .features-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .features-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #059669;
+            font-weight: bold;
+        }
+
+        .testimonials {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .testimonials h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .testimonial {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .stars {
+            margin-bottom: 0.5rem;
+        }
+
+        .customer {
+            font-style: italic;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .why-offer {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .why-offer h3 {
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .benefits {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .benefit {
+            background: #ecfdf5;
+            padding: 0.75rem;
+            border-radius: 8px;
+            border-left: 4px solid #059669;
+            font-weight: 500;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .cta-section h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-section p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-section .cta-button {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            font-size: 1.3rem;
+            padding: 1.2rem 3rem;
+            animation: pulse 2s infinite;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #374151;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .features-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-title {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .feature-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            padding: 1rem;
+        }
+
+        .stat-number {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #fbbf24;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-links a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #1e40af;
+            text-decoration: underline;
+        }
+
+        .footer-info {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .footer-contact {
+            background-color: #2563eb;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .footer-contact h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-contact p {
+            margin-bottom: 0.5rem;
+        }
+
+        .phone-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fbbf24;
+        }
+
+        .footer-legal {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            line-height: 1.5;
+            border-top: 1px solid #e5e7eb;
+            padding-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="MagaIu Ofertas Logo">
+                MagaIu Ofertas
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="offer-badge"><i class="fas fa-snowflake"></i> OFERTA EXCLUSIVA <i class="fas fa-snowflake"></i></div>
+                <h1 class="hero-title">GELADEIRA BRASTEMP 375L INOX POR APENAS R$150</h1>
+                <p class="hero-subtitle"><i class="fas fa-star"></i> Tecnologia, design e eficiência em um só produto. Agora ao seu alcance.</p>
+                
+                <div class="product-highlight">
+                    <div class="product-info">
+                        <h3 class="product-name"><i class="fas fa-check-circle"></i> Produto em Destaque</h3>
+                        <p class="product-title">Geladeira Brastemp Frost Free Duplex 375L Inox – BRM44HK</p>
+                        <div class="price-container">
+                            <span class="original-price">Preço original: R$3.499,00</span>
+                            <span class="offer-price">Oferta especial: R$150,00</span>
+                        </div>
+                        <p class="product-code">Código do produto: 013085700Brastemp</p>
+                    </div>
+                </div>
+
+                <div class="product-showcase-container">
+                    <!-- Carousel de Imagens -->
+                    <div class="product-gallery">
+                        <div class="carousel-container">
+                            <div class="carousel-track" id="carouselTrack">
+                                <div class="carousel-slide active" style="background-color: white;">
+                                    <img src="images/geladeira1.png" alt="Geladeira Brastemp - Vista 1" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira2.png" alt="Geladeira Brastemp - Vista 2" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira3.png" alt="Geladeira Brastemp - Vista 3" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira4.png" alt="Geladeira Brastemp - Vista 4" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira5.png" alt="Geladeira Brastemp - Vista 5" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira6.png" alt="Geladeira Brastemp - Vista 6" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira7.png" alt="Geladeira Brastemp - Vista 7" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira8.png" alt="Geladeira Brastemp - Vista 8" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira9.png" alt="Geladeira Brastemp - Vista 9" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira10.png" alt="Geladeira Brastemp - Vista 10" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira11.png" alt="Geladeira Brastemp - Vista 11" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira12.png" alt="Geladeira Brastemp - Vista 12" class="product-image">
+                                </div>
+                                <div class="carousel-slide" style="background-color: white;">
+                                    <img src="images/geladeira13.png" alt="Geladeira Brastemp - Vista 13" class="product-image">
+                                </div>
+                            </div>
+                            
+                            <!-- Navigation Buttons -->
+                            <button class="carousel-btn carousel-btn-prev" id="prevBtn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-btn carousel-btn-next" id="nextBtn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        
+                        <!-- Indicators -->
+                        <div class="carousel-indicators" id="carouselIndicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
+                            <span class="indicator" data-slide="4"></span>
+                            <span class="indicator" data-slide="5"></span>
+                            <span class="indicator" data-slide="6"></span>
+                            <span class="indicator" data-slide="7"></span>
+                            <span class="indicator" data-slide="8"></span>
+                            <span class="indicator" data-slide="9"></span>
+                            <span class="indicator" data-slide="10"></span>
+                            <span class="indicator" data-slide="11"></span>
+                            <span class="indicator" data-slide="12"></span>
+                        </div>
+                        
+                        <!-- Image Counter -->
+                        <div class="image-counter">
+                            <span id="currentImage">1</span> / <span id="totalImages">13</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Details - Magazine Luiza Style -->
+                    <div class="product-info-panel">
+                        <!-- Fast Delivery Badge -->
+                        <div class="delivery-badge">
+                            <div class="badge-chip">                                                           
+                            </div>
+                        </div>
+                    </div>
+
+        <div class="product-description" style="font-family: Arial, sans-serif; font-weight: normal;">
+            <h3 style="font-size: 28px; color: #1E3A8A; text-transform: uppercase; letter-spacing: 1px; text-align: center;"><i class="fas fa-info-circle"></i> DESCRIÇÃO DO PRODUTO</h3>
+            <p style="font-size: 18px; line-height: 1.6; color: #333; font-weight: 600;"><i class="fas fa-star" style="color: #3B82F6;"></i> A <strong>Geladeira Brastemp Frost Free BRM44HK</strong> une <em>elegância</em>, <em>eficiência energética</em> e <em>inovação em refrigeração</em>. Perfeita para quem busca <strong>FUNCIONALIDADE</strong> sem abrir mão do <strong>ESTILO</strong>, seu acabamento em inox complementa qualquer ambiente com <strong>SOFISTICAÇÃO TOTAL!</strong></p>
+            
+            <div class="features-list" style="background: linear-gradient(135deg, #DBEAFE, #BFDBFE); padding: 20px; border-radius: 15px; margin: 20px 0; border-left: 5px solid #3B82F6;">
+                <h4 style="font-size: 22px; color: #1E40AF; text-transform: uppercase; margin-bottom: 15px;"><i class="fas fa-cogs"></i> DESTAQUES TÉCNICOS IMPERDÍVEIS:</h4>
+                <ul style="font-size: 16px; font-weight: 600; color: #1E3A8A; list-style: none; padding: 0;">
+                    <li style="margin: 8px 0;"><i class="fas fa-trophy" style="color: #3B82F6; margin-right: 8px;"></i> <strong>Capacidade GIGANTE de 375 litros</strong></li>
+                    <li style="margin: 8px 0;"><i class="fas fa-snowflake" style="color: #3B82F6; margin-right: 8px;"></i> <strong>Sistema Frost Free:</strong> NUNCA MAIS descongele!</li>
+                    <li style="margin: 8px 0;"><i class="fas fa-wine-glass" style="color: #3B82F6; margin-right: 8px;"></i> <strong>Compartimento Extrafrio Fresh Zone:</strong> ideal para laticínios e bebidas</li>
+                    <li style="margin: 8px 0;"><i class="fas fa-microchip" style="color: #3B82F6; margin-right: 8px;"></i> <strong>Painel de controle externo</strong> com funções INTELIGENTES</li>
+                    <li style="margin: 8px 0;"><i class="fas fa-palette" style="color: #3B82F6; margin-right: 8px;"></i> <strong>Design ergonômico e moderno</strong> com puxadores embutidos</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="testimonials" style="font-family: Arial, sans-serif; background: linear-gradient(135deg, #EFF6FF, #DBEAFE); padding: 25px; border-radius: 15px; margin: 20px 0; border: 2px solid #3B82F6;">
+            <h3 style="font-size: 26px; color: #1E40AF; text-transform: uppercase; text-align: center; margin-bottom: 20px;"><i class="fas fa-comments"></i> O QUE DIZEM OS CONSUMIDORES</h3>
+            <div class="testimonial" style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0; box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2); border-left: 4px solid #3B82F6;">
+                <div class="stars" style="font-size: 20px; color: #3B82F6; margin-bottom: 10px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p style="font-size: 18px; font-style: italic; color: #1E3A8A; font-weight: 600;">"Design moderno, silenciosa e com ótimo espaço interno. <strong>MUITO ALÉM DAS EXPECTATIVAS!</strong>"</p>
+                <span class="customer" style="font-size: 14px; color: #64748B; font-weight: bold;"><i class="fas fa-user-check" style="color: #10B981;"></i> Cliente verificado</span>
+            </div>
+            <div class="testimonial" style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0; box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2); border-left: 4px solid #3B82F6;">
+                <div class="stars" style="font-size: 20px; color: #3B82F6; margin-bottom: 10px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p style="font-size: 18px; font-style: italic; color: #1E3A8A; font-weight: 600;">"Refrigeração potente e ótimo aproveitamento interno. <strong>BRASTEMP SENDO BRASTEMP!</strong>"</p>
+                <span class="customer" style="font-size: 14px; color: #64748B; font-weight: bold;"><i class="fas fa-medal" style="color: #F59E0B;"></i> Avaliação destacada</span>
+            </div>
+        </div>
+
+        <div class="why-offer" style="font-family: Arial, sans-serif; background: linear-gradient(135deg, #1E40AF, #3B82F6); color: white; padding: 30px; border-radius: 15px; margin: 20px 0; box-shadow: 0 8px 16px rgba(30, 64, 175, 0.3);">
+            <h3 style="font-size: 28px; text-transform: uppercase; text-align: center; margin-bottom: 25px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); color: white !important;"><i class="fas fa-bullseye"></i> POR QUE ESSA É UMA OFERTA IMPERDÍVEL?</h3>
+            <div class="benefits" style="display: grid; gap: 15px;">
+                <div class="benefit" style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 10px; font-size: 18px; font-weight: bold; border-left: 4px solid #60A5FA;"><i class="fas fa-percentage" style="color: #FBBF24; margin-right: 10px;"></i> <strong>Desconto REAL de mais de 95%</strong> sobre o preço original</div>
+                <div class="benefit" style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 10px; font-size: 18px; font-weight: bold; border-left: 4px solid #60A5FA;"><i class="fas fa-clock" style="color: #FBBF24; margin-right: 10px;"></i> <strong>Estoque limitado</strong> – Apenas unidades promocionais disponíveis</div>
+                <div class="benefit" style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 10px; font-size: 18px; font-weight: bold; border-left: 4px solid #60A5FA;"><i class="fas fa-shipping-fast" style="color: #FBBF24; margin-right: 10px;"></i> <strong>Entrega rápida e segura</strong> em todo o Brasil</div>
+                <div class="benefit" style="background: rgba(255,255,255,0.15); padding: 15px; border-radius: 10px; font-size: 18px; font-weight: bold; border-left: 4px solid #60A5FA;"><i class="fas fa-shield-alt" style="color: #FBBF24; margin-right: 10px;"></i> <strong>Produto original Brastemp</strong>, com garantia de fábrica</div>
+            </div>
+        </div>
+
+        <div class="cta-section" style="font-family: Arial, sans-serif; background: linear-gradient(135deg, #1E40AF, #2563EB); color: white; padding: 40px; border-radius: 20px; text-align: center; margin: 30px 0; box-shadow: 0 8px 16px rgba(30, 64, 175, 0.4); border: 3px solid #60A5FA;">
+            <h3 style="font-size: 32px; text-transform: uppercase; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);"><i class="fas fa-target"></i> GARANTA AGORA SUA GELADEIRA BRASTEMP FROST FREE POR APENAS <span style="color: #FBBF24; font-size: 40px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">R$150!</span></h3>
+            <p style="font-size: 20px; margin-bottom: 25px; font-weight: 600;"><i class="fas fa-clock" style="color: #FBBF24;"></i> Clique abaixo e aproveite antes que acabe:</p>
+            <a href="#" class="cta-button" style="display: inline-block; background: linear-gradient(135deg, #10B981, #059669); color: white; padding: 20px 40px; font-size: 24px; font-weight: bold; text-decoration: none; border-radius: 50px; text-transform: uppercase; box-shadow: 0 6px 12px rgba(0,0,0,0.3); transition: all 0.3s ease; border: 2px solid #60A5FA;"><i class="fas fa-shopping-cart" style="margin-right: 10px;"></i> COMPRAR AGORA!</a>
+        </div>
+        </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="features-title">Por que escolher MagaIu Ofertas?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h3 class="feature-title">Entrega Rápida</h3>
+                    <p class="feature-description">Receba seus produtos em casa com agilidade e segurança. Entrega expressa disponível para sua região.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3 class="feature-title">Pagamento Flexível</h3>
+                    <p class="feature-description">Parcele em até 12x sem juros no cartão ou use o Pix para ganhar desconto extra nas suas compras.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="feature-title">Compra Segura</h3>
+                    <p class="feature-description">Seus dados protegidos e garantia total em todos os produtos. Compre com tranquilidade e confiança.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3 class="feature-title">Qualidade Garantida</h3>
+                    <p class="feature-description">Produtos originais das melhores marcas com garantia do fabricante e suporte especializado.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 class="feature-title">App Exclusivo</h3>
+                    <p class="feature-description">Baixe nosso app e tenha acesso a ofertas exclusivas, notificações de promoções e muito mais.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-gift"></i></div>
+                    <h3 class="feature-title">Ofertas Diárias</h3>
+                    <p class="feature-description">Novos descontos todos os dias! Acompanhe nossas promoções relâmpago e não perca nenhuma oportunidade.</p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Blog da Lu</a>
+                <a href="#">Nossas lojas</a>
+                <a href="#">Tenha sua loja</a>
+                <a href="#">Regulamento</a>
+                <a href="#">Acessibilidade</a>
+                <a href="#">Segurança e Privacidade</a>
+            </div>
+
+            <div class="footer-info">
+                <p>Preços e condições de pagamento exclusivos para compras via internet, podendo variar nas lojas físicas. Ofertas válidas na compra de até 5 peças de cada produto por cliente, até o término dos nossos estoques para internet. Caso os produtos apresentem divergências de valores, o preço válido é o da sacola de compras.</p>
+                
+                <p>O Magazine Luiza atua como correspondente no País, nos termos da Resolução CMN nº 4.935/2021, e encaminha propostas de cartão de crédito e operações de crédito para a Luizacred S.A Sociedade de Crédito, Financiamento e Investimento inscrita no CNPJ sob o nº 02.206.577/0001-80.</p>
+            </div>
+
+            <div class="footer-legal">
+                <p>Magazine Luiza S/A - CNPJ: 47.960.950/1088-36 - Endereço: Rua Arnulfo de Lima, 2385 - Vila Santa Cruz, Franca/SP - CEP 14.403-471</p>
+                <p>® Magazine Luiza – Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        class ImageCarousel {
+            constructor() {
+                this.currentSlide = 0;
+                this.totalSlides = 13;
+                this.track = document.getElementById('carouselTrack');
+                this.slides = document.querySelectorAll('.carousel-slide');
+                this.indicators = document.querySelectorAll('.indicator');
+                this.prevBtn = document.getElementById('prevBtn');
+                this.nextBtn = document.getElementById('nextBtn');
+                this.currentImageSpan = document.getElementById('currentImage');
+                this.totalImagesSpan = document.getElementById('totalImages');
+                
+                this.init();
+            }
+            
+            init() {
+                // Set total images
+                this.totalImagesSpan.textContent = this.totalSlides;
+                
+                // Add event listeners
+                this.prevBtn.addEventListener('click', () => this.prevSlide());
+                this.nextBtn.addEventListener('click', () => this.nextSlide());
+                
+                // Add indicator event listeners
+                this.indicators.forEach((indicator, index) => {
+                    indicator.addEventListener('click', () => this.goToSlide(index));
+                });
+                
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowLeft') this.prevSlide();
+                    if (e.key === 'ArrowRight') this.nextSlide();
+                });
+                
+                // Touch/swipe support
+                let startX = 0;
+                let endX = 0;
+                
+                this.track.addEventListener('touchstart', (e) => {
+                    startX = e.touches[0].clientX;
+                });
+                
+                this.track.addEventListener('touchend', (e) => {
+                    endX = e.changedTouches[0].clientX;
+                    if (startX - endX > 50) this.nextSlide();
+                    if (endX - startX > 50) this.prevSlide();
+                });
+                
+                // Auto-play (optional - uncomment to enable)
+                // this.startAutoPlay();
+            }
+            
+            updateSlide() {
+                // Hide all slides
+                this.slides.forEach(slide => slide.classList.remove('active'));
+                
+                // Show current slide
+                this.slides[this.currentSlide].classList.add('active');
+                
+                // Update indicators
+                this.indicators.forEach(indicator => indicator.classList.remove('active'));
+                this.indicators[this.currentSlide].classList.add('active');
+                
+                // Update counter
+                this.currentImageSpan.textContent = this.currentSlide + 1;
+                
+                // Transform track (for smooth transition effect)
+                this.track.style.transform = `translateX(-${this.currentSlide * 100}%)`;
+            }
+            
+            nextSlide() {
+                this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                this.updateSlide();
+            }
+            
+            prevSlide() {
+                this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                this.updateSlide();
+            }
+            
+            goToSlide(slideIndex) {
+                this.currentSlide = slideIndex;
+                this.updateSlide();
+            }
+            
+            startAutoPlay() {
+                setInterval(() => {
+                    this.nextSlide();
+                }, 5000); // Change slide every 5 seconds
+            }
+        }
+        
+        // Initialize carousel when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new ImageCarousel();
+        });
+    </script>
+</body>
+</html>
