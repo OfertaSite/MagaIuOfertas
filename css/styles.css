@@ -1632,6 +1632,7 @@ footer {
         }
 
         .hr-colorful {
+            margin: 0;
             height: 5px;
             border: none;
             border-radius: 4px;
@@ -1652,3 +1653,4 @@ footer {
                 rgb(0, 214, 4)
             );
             }
+
