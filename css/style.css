@@ -1304,3 +1304,58 @@ footer {
         top: 5px; /* Ajuste esse valor conforme necessário (ex: 3px, 5px, -2px, etc) */
     }
 }
+
+ /* ESTILO DO CONTADOR E ESTOQUE */
+        .urgency-banner {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .urgency-banner h3 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .countdown {
+            font-size: 28px;
+            font-weight: 800;
+            margin: 10px 0;
+            letter-spacing: 2px;
+        }
+        
+        .stock-counter {
+            background: rgba(255,255,255,0.2);
+            padding: 8px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 3px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: white;
+            width: 30%;
+            animation: progressAnimation 2s ease-in-out infinite;
+        }
+        
+        @keyframes progressAnimation {
+            0% { width: 30%; }
+            50% { width: 70%; }
+            100% { width: 30%; }
+        }
