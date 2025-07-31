@@ -1367,7 +1367,7 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.85);
-    z-index: 9999;
+    z-index: 9999 !important;
     overflow-y: auto;
     font-family: 'Poppins', sans-serif;
 }
@@ -1699,4 +1699,6 @@ footer {
                 top: 69px; /* Ajuste conforme o header mobile */
             }
     }
+
+    
 
